@@ -1,11 +1,6 @@
-name: NeeDoh Stock Watch
+name: NeeDoh Stock Watch - Manual Backup
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/5 * * * *"
-concurrency:
-  group: needoh-monitor
-  cancel-in-progress: false
 permissions:
   contents: write
 jobs:
