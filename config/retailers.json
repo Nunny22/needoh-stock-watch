@@ -1,0 +1,5 @@
+[
+  {"id":"smyths","name":"Smyths Toys","url":"https://www.smythstoys.com/uk/en-gb/search?text=NeeDoh","price":29.99,"product":"NeeDoh 2026 Advent Calendar","outOfStock":["out of stock","sold out"],"inStock":["NeeDoh 2026 Advent Calendar£29.99"]},
+  {"id":"menkind","name":"MenKind","url":"https://www.menkind.co.uk/needoh-24-days-fidget-advent-calendar","price":35.00,"product":"NeeDoh 24 Days Fidget Advent Calendar","outOfStock":["out of stock","sold out","notify me when"],"inStock":["add to basket","add to cart"]},
+  {"id":"tinker-tot","name":"Tinker & Tot","url":"https://www.tinkerandtot.co.uk/products/needoh-advent-calendar-2026","price":31.99,"product":"NeeDoh Advent Calendar 2026","outOfStock":["sold out"],"inStock":["add to cart","add to basket"]}
+]
