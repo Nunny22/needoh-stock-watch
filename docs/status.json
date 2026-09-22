@@ -1,8 +1,26 @@
 {
-  "updatedAt": "2026-09-22T20:00:21.719Z",
+  "updatedAt": "2026-09-22T20:02:59.007Z",
   "target": 10,
   "secured": 0,
   "retailers": [
+    {
+      "id": "alis",
+      "name": "Ali's Sensory Boxes",
+      "url": "https://www.alissensoryboxes.com/products/needoh-2026-advent-calendar",
+      "price": 29.99,
+      "product": "NeeDoh 2026 Advent Calendar",
+      "outOfStock": [
+        "sold out"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "out_of_stock",
+      "note": "",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "changedAt": "2026-09-22T20:02:59.007Z"
+    },
     {
       "id": "menkind",
       "name": "MenKind",
@@ -20,7 +38,7 @@
       ],
       "status": "error",
       "note": "HTTP 403",
-      "checkedAt": "2026-09-22T20:00:21.719Z",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -38,7 +56,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:00:21.719Z",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -57,7 +75,7 @@
       ],
       "status": "error",
       "note": "HTTP 404",
-      "checkedAt": "2026-09-22T20:00:21.719Z",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -75,7 +93,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:00:21.719Z",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -93,7 +111,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:00:21.719Z",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -111,7 +129,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:00:21.719Z",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -130,7 +148,7 @@
       ],
       "status": "in_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:00:21.719Z",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -148,7 +166,7 @@
       ],
       "status": "error",
       "note": "HTTP 404",
-      "checkedAt": "2026-09-22T20:00:21.719Z",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -167,7 +185,7 @@
       ],
       "status": "error",
       "note": "HTTP 403",
-      "checkedAt": "2026-09-22T20:00:21.719Z",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -185,7 +203,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:00:21.719Z",
+      "checkedAt": "2026-09-22T20:02:59.007Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     }
   ]
