@@ -4,6 +4,7 @@ async function read(p,f){try{return JSON.parse(await fs.readFile(p,"utf8"))}catc
 const old=await read("docs/status.json",{retailers:[],secured:0});
 const previous=new Map((old.retailers||[]).map(x=>[x.id,x]));
 const now=new Date().toISOString();
+const priority=new Set(["menkind","smyths"]);
 function detect(html,r){
  const t=html.replace(/\s+/g," ").toLowerCase();
  if(!t.includes(r.product.toLowerCase())) return "unknown";
@@ -21,6 +22,7 @@ for(const r of cfg){
  }catch(e){note=String(e.message||e).slice(0,160)}
  const prev=previous.get(r.id);
  retailers.push({...r,status,note,checkedAt:now,changedAt:prev&&prev.status===status?(prev.changedAt||prev.checkedAt):now});
+ if(priority.has(r.id)&&(status==="error"||status==="unknown")) console.warn("PRIORITY MONITOR DEGRADED:",r.name,status,note);
 }
 const state={updatedAt:now,target:10,secured:old.secured||0,retailers};
 await fs.mkdir("docs",{recursive:true});
