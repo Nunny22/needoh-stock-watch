@@ -21,9 +21,15 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 22
+      - name: Install Node.js
+        shell: powershell
+        run: |
+          $zip = "$env:RUNNER_TEMP\node.zip"
+          $dir = "$env:RUNNER_TEMP\node22"
+          Invoke-WebRequest -Uri "https://nodejs.org/dist/v22.20.0/node-v22.20.0-win-x64.zip" -OutFile $zip
+          Expand-Archive -Path $zip -DestinationPath $dir -Force
+          $node = Join-Path $dir "node-v22.20.0-win-x64"
+          $node | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
       - name: Install dependencies
         run: npm install --ignore-scripts
       - name: Install Chromium
