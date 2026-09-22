@@ -13,9 +13,15 @@ function detect(html,r){
  if(r.id==="smyths"){
   const exact=has("needoh 2026 advent calendar")||has("needoh%202026%20advent%20calendar")||has("needoh-2026-advent-calendar");
   if(!exact) return "unknown";
-  if(has("out of stock")||has("sold out")||has("currently unavailable")||has("not available for home delivery")) return "out_of_stock";
-  if((has("pre-order")||has("pre order"))&&(has("home delivery")||has("add to basket")||has("click & collect"))) return "preorder";
-  if(has("add to basket")||has("add to bag")) return "in_stock";
+  // Smyths has separate fulfilment controls. Never use store-level "out of stock" text for online stock.
+  const deliveryGroup=t.match(/aria-label=["']delivery options["'][\\s\\S]{0,7000}/)?.[0]||"";
+  const deliveryDisabled=/aria-disabled=["']true["']/.test(deliveryGroup);
+  const deliveryEnabled=/aria-disabled=["']false["']/.test(deliveryGroup);
+  const basketDisabled=/<button[^>]*disabled[^>]*>[\\s\\S]{0,500}add to basket/i.test(html)||/<button[^>]*data-v-[^>]*disabled[^>]*>[\\s\\S]{0,500}add to basket/i.test(html);
+  const basketEnabled=/<button(?![^>]*disabled)[^>]*>[\\s\\S]{0,500}add to basket/i.test(html);
+  if((has("pre-order")||has("pre order"))&&(deliveryEnabled||basketEnabled)) return "preorder";
+  if(deliveryEnabled&&basketEnabled) return "in_stock";
+  if(deliveryDisabled&&basketDisabled) return "out_of_stock";
   return "watching";
  }
  if(r.id==="menkind"){
