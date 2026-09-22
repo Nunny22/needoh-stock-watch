@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64, needoh-monitor]
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
@@ -27,16 +27,20 @@ jobs:
       - name: Install dependencies
         run: npm install --ignore-scripts
       - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install chromium
       - name: Check stock
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: node src/monitor.js
       - name: Save dashboard state
+        shell: powershell
         run: |
           git config user.name "needoh-stock-watch"
           git config user.email "actions@users.noreply.github.com"
           git add docs/status.json
-          git diff --cached --quiet || git commit -m "chore: update backup stock status"
-          git push
+          git diff --cached --quiet
+          if ($LASTEXITCODE -ne 0) {
+            git commit -m "chore: update backup stock status"
+            git push
+          }
