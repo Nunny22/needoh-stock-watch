@@ -1,1 +1,228 @@
-{"updatedAt":null,"target":10,"secured":0,"retailers":[]}
+{
+  "updatedAt": "2026-09-22T19:58:29.436Z",
+  "target": 10,
+  "secured": 0,
+  "retailers": [
+    {
+      "id": "smyths",
+      "name": "Smyths Toys",
+      "url": "https://www.smythstoys.com/uk/en-gb/search?text=NeeDoh",
+      "price": 29.99,
+      "product": "NeeDoh 2026 Advent Calendar",
+      "outOfStock": [
+        "out of stock",
+        "sold out"
+      ],
+      "inStock": [
+        "NeeDoh 2026 Advent Calendar£29.99"
+      ],
+      "status": "unknown",
+      "note": "",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "menkind",
+      "name": "MenKind",
+      "url": "https://www.menkind.co.uk/needoh-24-days-fidget-advent-calendar",
+      "price": 35,
+      "product": "NeeDoh 24 Days Fidget Advent Calendar",
+      "outOfStock": [
+        "out of stock",
+        "sold out",
+        "notify me when"
+      ],
+      "inStock": [
+        "add to basket",
+        "add to cart"
+      ],
+      "status": "error",
+      "note": "HTTP 403",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "tinker-tot",
+      "name": "Tinker & Tot",
+      "url": "https://www.tinkerandtot.co.uk/products/needoh-advent-calendar-2026",
+      "price": 31.99,
+      "product": "NeeDoh Advent Calendar 2026",
+      "outOfStock": [
+        "sold out"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "unknown",
+      "note": "",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "alis",
+      "name": "Ali's Sensory Boxes",
+      "url": "https://www.alissensoryboxes.com/collections/needoh",
+      "price": 29.99,
+      "product": "NeeDoh 2026 Advent Calendar",
+      "outOfStock": [
+        "sold out"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "out_of_stock",
+      "note": "",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "junior-edition",
+      "name": "Junior Edition",
+      "url": "https://www.junioredition.com/collections/toys-5-7-years/products/needoh-advent-calendar-2026-by-schylling",
+      "price": 39,
+      "product": "Needoh Advent Calendar 2026 by Schylling",
+      "outOfStock": [
+        "sold out",
+        "unavailable"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "error",
+      "note": "HTTP 404",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "jadlam",
+      "name": "Jadlam Toys & Models",
+      "url": "https://www.jadlamracingmodels.com/products/needoh-2026-advent-calendar",
+      "price": 34.95,
+      "product": "NeeDoh 2026 Advent Calendar",
+      "outOfStock": [
+        "sold out"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "out_of_stock",
+      "note": "",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "sorealistic",
+      "name": "SoRealistic",
+      "url": "https://www.sorealistic.co.uk/products/official-authentic-needoh-advent-calendar-2026",
+      "price": 40,
+      "product": "Official Authentic NEEDOH Advent Calendar 2026",
+      "outOfStock": [
+        "sold out"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "out_of_stock",
+      "note": "",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "plush-paradise",
+      "name": "Plush Paradise",
+      "url": "https://plushparadise.co.uk/products/needoh-2026-advent-calendar-mini-christmas-squishy-fidget-toy-24-pack",
+      "price": null,
+      "product": "NeeDoh 2026 Advent Calendar",
+      "outOfStock": [
+        "sold out"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "unknown",
+      "note": "",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "kid-collective",
+      "name": "The Kid Collective",
+      "url": "https://thekidcollective.co.uk/products/needoh-advent-calendar-2026",
+      "price": null,
+      "product": "NeeDoh Advent Calendar 2026",
+      "outOfStock": [
+        "sold out",
+        "back soon"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "in_stock",
+      "note": "",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "dyslexia-shop",
+      "name": "The Dyslexia Shop",
+      "url": "https://www.thedyslexiashop.co.uk/products/needoh-advent-calendar-24-fidget-toys-for-adhd-and-sensory-play",
+      "price": null,
+      "product": "NeeDoh Advent Calendar",
+      "outOfStock": [
+        "sold out"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "error",
+      "note": "HTTP 404",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "urban-outfitters",
+      "name": "Urban Outfitters UK",
+      "url": "https://www.urbanoutfitters.com/en-gb/shop/needoh-advent-calender?color=000&type=REGULAR",
+      "price": null,
+      "product": "NeeDoh Advent Calender",
+      "outOfStock": [
+        "sold out",
+        "out of stock"
+      ],
+      "inStock": [
+        "add to bag",
+        "add to basket"
+      ],
+      "status": "error",
+      "note": "HTTP 403",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "jac-iom",
+      "name": "JAC Stores IOM",
+      "url": "https://shop.jacstores.co.uk/products/needoh-advent-calendar-2026",
+      "price": 29.99,
+      "product": "Needoh Advent Calendar 2026",
+      "outOfStock": [
+        "sold out"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "unknown",
+      "note": "",
+      "checkedAt": "2026-09-22T19:58:29.436Z",
+      "changedAt": "2026-09-22T19:58:29.436Z"
+    }
+  ]
+}
