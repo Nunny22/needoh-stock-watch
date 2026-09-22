@@ -8,9 +8,23 @@ const SB="https://hcjqrvzmkchgcncoqzvl.supabase.co/functions/v1/needoh-fallback-
 const priority=new Set(["menkind","smyths"]);
 function detect(html,r){
  const t=html.replace(/\s+/g," ").toLowerCase();
- if(!t.includes(r.product.toLowerCase())) return "unknown";
- if((r.outOfStock||[]).some(x=>t.includes(x.toLowerCase()))) return "out_of_stock";
- if((r.inStock||[]).some(x=>t.includes(x.toLowerCase()))) return "in_stock";
+ const has=(x)=>t.includes(String(x).toLowerCase());
+ if(r.id==="smyths"){
+  if(!has("needoh 2026 advent calendar")||!has("£29.99")) return "unknown";
+  // Search/category pages prove the exact product exists, not that it is purchasable.
+  return "watching";
+ }
+ if(r.id==="menkind"){
+  const exact=has("needoh 24 days fidget advent calendar")&&(has("product code: 131163")||has("sysqmac26")||has("019649506170"));
+  if(!exact)return "unknown";
+  if(has("out of stock")||has("sold out")||has("notify me when"))return "out_of_stock";
+  if((has("pre-order")||has("preorder"))&&(has("add to basket")||has("add to cart")))return "preorder";
+  if((has("add to basket")||has("add to cart"))&&!has("adding to basket... the item has been added"))return "in_stock";
+  return "watching";
+ }
+ if(!has(r.product)) return "unknown";
+ if((r.outOfStock||[]).some(has)) return "out_of_stock";
+ if((r.inStock||[]).some(has)) return "in_stock";
  return "watching";
 }
 const retailers=[];
