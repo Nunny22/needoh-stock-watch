@@ -16,7 +16,7 @@ function detect(html,r){
   return "watching";
  }
  if(r.id==="menkind"){
-  const exact=has("needoh 24 days fidget advent calendar")&&(has("product code: 131163")||has("sysqmac26")||has("019649506170"));
+  const exact=has("needoh 24 days fidget advent calendar")&&(has("product code: 131163")||has("product code: **131163**")||has("sysqmac26")||has("019649506170"));
   if(!exact)return "unknown";
   if(has("out of stock")||has("sold out")||has("notify me when"))return "out_of_stock";
   if((has("pre-order")||has("preorder"))&&(has("add to basket")||has("add to cart")))return "preorder";
@@ -33,8 +33,18 @@ for(const r of cfg){
  let status="error",note="";
  try{
   const res=await fetch(r.url,{redirect:"follow",headers:{"user-agent":"Mozilla/5.0 (compatible; personal stock availability monitor)","accept-language":"en-GB,en;q=0.9"}});
-  if(!res.ok) throw new Error("HTTP "+res.status);
-  status=detect(await res.text(),r);
+  let body;
+  if(!res.ok && r.id==="menkind" && res.status===403){
+    const proxy="https://r.jina.ai/https://www.menkind.co.uk/needoh-24-days-fidget-advent-calendar";
+    const pr=await fetch(proxy,{headers:{"accept":"text/plain"}});
+    if(!pr.ok) throw new Error("HTTP 403; reader "+pr.status);
+    body=await pr.text();
+    note="MenKind reader fallback";
+  } else {
+    if(!res.ok) throw new Error("HTTP "+res.status);
+    body=await res.text();
+  }
+  status=detect(body,r);
  }catch(e){note=String(e.message||e).slice(0,160)}
  const prev=previous.get(r.id);
  retailers.push({...r,status,note,checkedAt:now,changedAt:prev&&prev.status===status?(prev.changedAt||prev.checkedAt):now});
