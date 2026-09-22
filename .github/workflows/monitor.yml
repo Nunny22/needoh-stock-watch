@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'src/monitor.js'
+      - 'config/retailers.json'
 permissions:
   contents: write
 concurrency:
