@@ -5,6 +5,7 @@ const old=await read("docs/status.json",{retailers:[],secured:0});
 const previous=new Map((old.retailers||[]).map(x=>[x.id,x]));
 const now=new Date().toISOString();
 const SB="https://hcjqrvzmkchgcncoqzvl.supabase.co/functions/v1/needoh-fallback-report";
+console.log("NeeDoh monitor starting",now);
 const priority=new Set(["menkind","smyths"]);
 function detect(html,r){
  const t=html.replace(/\s+/g," ").toLowerCase();
