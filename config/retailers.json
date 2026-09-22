@@ -174,5 +174,36 @@
       "add to cart",
       "add to basket"
     ]
+  },
+  {
+    "id": "bigjigs",
+    "name": "Bigjigs Toys",
+    "url": "https://www.bigjigstoys.co.uk/products/needoh-advent-calendar-sysqmac26",
+    "price": 29.99,
+    "product": "NeeDoh Advent Calendar Mini Christmas Squishy Fidget Toy 24 Pack",
+    "outOfStock": [
+      "sold out",
+      "backordered",
+      "pickup currently unavailable"
+    ],
+    "inStock": [
+      "add to cart",
+      "add to basket"
+    ]
+  },
+  {
+    "id": "dorothy-perkins",
+    "name": "Dorothy Perkins",
+    "url": "https://www.dorothyperkins.com/product/schylling-needoh-advent-calendar---24-days-of-holly-jolly-squishes_p-1b0febda-36ec-44e2-9829-e130d128ab9a",
+    "price": 29.99,
+    "product": "NeeDoh Advent Calendar - 24 Days of Holly Jolly Squishes",
+    "outOfStock": [
+      "out of stock",
+      "sold out"
+    ],
+    "inStock": [
+      "add to bag",
+      "add to basket"
+    ]
   }
 ]
