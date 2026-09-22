@@ -1,5 +1,5 @@
 import fs from "node:fs/promises";
-import { chromium } from "playwright";
+import { chromium } from "patchright";
 const cfg=JSON.parse(await fs.readFile("config/retailers.json","utf8"));
 async function read(p,f){try{return JSON.parse(await fs.readFile(p,"utf8"))}catch{return f}}
 const old=await read("docs/status.json",{retailers:[],secured:0});
@@ -47,8 +47,8 @@ for(const r of cfg){
     let browser;
     let inv;
     try{
-      browser=await chromium.launch({channel:"chrome",headless:false});
-      const context=await browser.newContext({locale:"en-GB",userAgent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"});
+      browser=await chromium.launch({headless:true});
+      const context=await browser.newContext({locale:"en-GB"});
       const page=await context.newPage();
       const inventoryResponse=page.waitForResponse(resp=>resp.url().includes(apiPart),{timeout:45000});
       await page.goto(r.url,{waitUntil:"domcontentloaded",timeout:45000});
