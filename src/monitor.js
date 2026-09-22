@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+import { chromium } from "playwright";
 const cfg=JSON.parse(await fs.readFile("config/retailers.json","utf8"));
 async function read(p,f){try{return JSON.parse(await fs.readFile(p,"utf8"))}catch{return f}}
 const old=await read("docs/status.json",{retailers:[],secured:0});
@@ -43,9 +44,20 @@ for(const r of cfg){
  try{
   if(r.id==="smyths"){
     const api="https://www.smythstoys.com/api/uk/en-gb/product/product-inventory?code=258225&userId=anonymous&bundle=false";
-    const ir=await fetch(api,{headers:{"accept":"application/json","accept-language":"en-GB,en;q=0.9","x-smyths-site-id":"uk","referer":r.url,"user-agent":"Mozilla/5.0 (compatible; personal stock availability monitor)"}});
-    if(!ir.ok) throw new Error("Smyths inventory HTTP "+ir.status);
-    const inv=await ir.json();
+    let browser;
+    let inv;
+    try{
+      browser=await chromium.launch({headless:true});
+      const context=await browser.newContext({locale:"en-GB",userAgent:"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"});
+      const page=await context.newPage();
+      await page.goto(r.url,{waitUntil:"domcontentloaded",timeout:30000});
+      const result=await page.evaluate(async(api)=>{
+        const res=await fetch(api,{headers:{"accept":"application/json","X-Smyths-Site-Id":"uk"}});
+        return {status:res.status,text:await res.text()};
+      },api);
+      if(result.status!==200) throw new Error("Smyths browser inventory HTTP "+result.status);
+      inv=JSON.parse(result.text);
+    } finally { if(browser) await browser.close(); }
     if(String(inv?.code)!=="258225") throw new Error("Smyths inventory product mismatch");
     const hd=inv?.hdSection||{};
     const price=Number(inv?.prices?.value);
