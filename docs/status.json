@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T20:06:05.171Z",
+  "updatedAt": "2026-09-22T20:07:00.185Z",
   "target": 10,
   "secured": 0,
   "retailers": [
@@ -21,7 +21,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T20:03:25.301Z"
     },
     {
@@ -39,7 +39,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T20:02:59.007Z"
     },
     {
@@ -59,7 +59,7 @@
       ],
       "status": "watching",
       "note": "MenKind reader fallback",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T20:06:05.171Z"
     },
     {
@@ -77,7 +77,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -96,7 +96,7 @@
       ],
       "status": "error",
       "note": "HTTP 404",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -114,7 +114,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -132,7 +132,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -150,7 +150,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -169,7 +169,7 @@
       ],
       "status": "in_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -187,7 +187,7 @@
       ],
       "status": "error",
       "note": "HTTP 404",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -206,7 +206,7 @@
       ],
       "status": "error",
       "note": "HTTP 403",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -224,8 +224,47 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:06:05.171Z",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
+    },
+    {
+      "id": "bigjigs",
+      "name": "Bigjigs Toys",
+      "url": "https://www.bigjigstoys.co.uk/products/needoh-advent-calendar-sysqmac26",
+      "price": 29.99,
+      "product": "NeeDoh Advent Calendar Mini Christmas Squishy Fidget Toy 24 Pack",
+      "outOfStock": [
+        "sold out",
+        "backordered",
+        "pickup currently unavailable"
+      ],
+      "inStock": [
+        "add to cart",
+        "add to basket"
+      ],
+      "status": "out_of_stock",
+      "note": "",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
+      "changedAt": "2026-09-22T20:07:00.185Z"
+    },
+    {
+      "id": "dorothy-perkins",
+      "name": "Dorothy Perkins",
+      "url": "https://www.dorothyperkins.com/product/schylling-needoh-advent-calendar---24-days-of-holly-jolly-squishes_p-1b0febda-36ec-44e2-9829-e130d128ab9a",
+      "price": 29.99,
+      "product": "NeeDoh Advent Calendar - 24 Days of Holly Jolly Squishes",
+      "outOfStock": [
+        "out of stock",
+        "sold out"
+      ],
+      "inStock": [
+        "add to bag",
+        "add to basket"
+      ],
+      "status": "out_of_stock",
+      "note": "",
+      "checkedAt": "2026-09-22T20:07:00.185Z",
+      "changedAt": "2026-09-22T20:07:00.185Z"
     }
   ]
 }
