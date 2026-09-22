@@ -1,8 +1,29 @@
 {
-  "updatedAt": "2026-09-22T20:02:59.007Z",
+  "updatedAt": "2026-09-22T20:03:25.301Z",
   "target": 10,
   "secured": 0,
   "retailers": [
+    {
+      "id": "smyths",
+      "name": "Smyths Toys",
+      "url": "https://www.smythstoys.com/uk/en-gb/toys/squishy-toys/needoh-2026-advent-calendar/p/258225",
+      "price": 29.99,
+      "product": "NeeDoh 2026 Advent Calendar",
+      "outOfStock": [
+        "out of stock",
+        "sold out",
+        "not available for home delivery"
+      ],
+      "inStock": [
+        "add to basket",
+        "home delivery",
+        "click & collect"
+      ],
+      "status": "unknown",
+      "note": "",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
+      "changedAt": "2026-09-22T20:03:25.301Z"
+    },
     {
       "id": "alis",
       "name": "Ali's Sensory Boxes",
@@ -18,7 +39,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T20:02:59.007Z"
     },
     {
@@ -38,7 +59,7 @@
       ],
       "status": "error",
       "note": "HTTP 403",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -56,7 +77,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -75,7 +96,7 @@
       ],
       "status": "error",
       "note": "HTTP 404",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -93,7 +114,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -111,7 +132,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -129,7 +150,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -148,7 +169,7 @@
       ],
       "status": "in_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -166,7 +187,7 @@
       ],
       "status": "error",
       "note": "HTTP 404",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -185,7 +206,7 @@
       ],
       "status": "error",
       "note": "HTTP 403",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -203,7 +224,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:02:59.007Z",
+      "checkedAt": "2026-09-22T20:03:25.301Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     }
   ]
