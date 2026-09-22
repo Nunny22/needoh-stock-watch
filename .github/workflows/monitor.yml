@@ -1,5 +1,5 @@
 name: Patchright Smyths Test
-on:
+'on':
   push:
     branches:
       - test/patchright-github-hosted
