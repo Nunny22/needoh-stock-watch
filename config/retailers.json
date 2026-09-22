@@ -1,5 +1,22 @@
 [
   {
+    "id": "smyths",
+    "name": "Smyths Toys",
+    "url": "https://www.smythstoys.com/uk/en-gb/toys/squishy-toys/needoh-2026-advent-calendar/p/258225",
+    "price": 29.99,
+    "product": "NeeDoh 2026 Advent Calendar",
+    "outOfStock": [
+      "out of stock",
+      "sold out",
+      "not available for home delivery"
+    ],
+    "inStock": [
+      "add to basket",
+      "home delivery",
+      "click & collect"
+    ]
+  },
+  {
     "id": "alis",
     "name": "Ali's Sensory Boxes",
     "url": "https://www.alissensoryboxes.com/products/needoh-2026-advent-calendar",
