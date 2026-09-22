@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T20:14:03.441Z",
+  "updatedAt": "2026-09-22T20:16:24.770Z",
   "target": 10,
   "secured": 0,
   "retailers": [
@@ -21,7 +21,7 @@
       ],
       "status": "unknown",
       "note": "Smyths rendered reader",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T20:03:25.301Z"
     },
     {
@@ -39,7 +39,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T20:02:59.007Z"
     },
     {
@@ -59,7 +59,7 @@
       ],
       "status": "watching",
       "note": "MenKind reader fallback",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T20:06:05.171Z"
     },
     {
@@ -77,7 +77,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -96,7 +96,7 @@
       ],
       "status": "error",
       "note": "HTTP 404",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -114,7 +114,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -132,7 +132,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -150,7 +150,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -169,7 +169,7 @@
       ],
       "status": "in_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -187,7 +187,7 @@
       ],
       "status": "error",
       "note": "HTTP 404",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -206,7 +206,7 @@
       ],
       "status": "error",
       "note": "HTTP 403",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -224,7 +224,7 @@
       ],
       "status": "unknown",
       "note": "",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T19:58:29.436Z"
     },
     {
@@ -244,7 +244,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T20:07:00.185Z"
     },
     {
@@ -263,7 +263,7 @@
       ],
       "status": "out_of_stock",
       "note": "",
-      "checkedAt": "2026-09-22T20:14:03.441Z",
+      "checkedAt": "2026-09-22T20:16:24.770Z",
       "changedAt": "2026-09-22T20:07:00.185Z"
     }
   ]
