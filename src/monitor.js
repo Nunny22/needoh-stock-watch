@@ -43,20 +43,18 @@ for(const r of cfg){
  let status="error",note="";
  try{
   if(r.id==="smyths"){
-    const api="https://www.smythstoys.com/api/uk/en-gb/product/product-inventory?code=258225&userId=anonymous&bundle=false";
+    const apiPart="/api/uk/en-gb/product/product-inventory?code=258225";
     let browser;
     let inv;
     try{
       browser=await chromium.launch({headless:true});
-      const context=await browser.newContext({locale:"en-GB",userAgent:"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"});
+      const context=await browser.newContext({locale:"en-GB",userAgent:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"});
       const page=await context.newPage();
-      await page.goto(r.url,{waitUntil:"domcontentloaded",timeout:30000});
-      const result=await page.evaluate(async(api)=>{
-        const res=await fetch(api,{headers:{"accept":"application/json","X-Smyths-Site-Id":"uk"}});
-        return {status:res.status,text:await res.text()};
-      },api);
-      if(result.status!==200) throw new Error("Smyths browser inventory HTTP "+result.status);
-      inv=JSON.parse(result.text);
+      const inventoryResponse=page.waitForResponse(resp=>resp.url().includes(apiPart),{timeout:45000});
+      await page.goto(r.url,{waitUntil:"domcontentloaded",timeout:45000});
+      const resp=await inventoryResponse;
+      if(resp.status()!==200) throw new Error("Smyths page inventory HTTP "+resp.status());
+      inv=await resp.json();
     } finally { if(browser) await browser.close(); }
     if(String(inv?.code)!=="258225") throw new Error("Smyths inventory product mismatch");
     const hd=inv?.hdSection||{};
