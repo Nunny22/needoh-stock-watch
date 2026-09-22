@@ -4,7 +4,9 @@ name: NeeDoh Stock Watch - Redundant Backup
     - cron: "*/5 * * * *"
   workflow_dispatch:
   push:
-    branches: [main, test/patchright-github-hosted]
+    branches:
+      - main
+      - test/patchright-github-hosted
     paths:
       - 'src/monitor.js'
       - 'config/retailers.json'
