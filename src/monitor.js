@@ -11,8 +11,11 @@ function detect(html,r){
  const t=html.replace(/\s+/g," ").toLowerCase();
  const has=(x)=>t.includes(String(x).toLowerCase());
  if(r.id==="smyths"){
-  if(!has("needoh 2026 advent calendar")||!has("£29.99")) return "unknown";
-  // Search/category pages prove the exact product exists, not that it is purchasable.
+  const exact=(has("needoh 2026 advent calendar")||has("calendrier de l'avent édition 2026"))&&(has("258225")||has("£29.99"));
+  if(!exact) return "unknown";
+  if(has("out of stock")||has("sold out")||has("currently unavailable")||has("not available for home delivery")) return "out_of_stock";
+  if((has("pre-order")||has("pre order"))&&(has("home delivery")||has("add to basket")||has("click & collect"))) return "preorder";
+  if(has("add to basket")||has("add to bag")) return "in_stock";
   return "watching";
  }
  if(r.id==="menkind"){
@@ -34,7 +37,13 @@ for(const r of cfg){
  try{
   const res=await fetch(r.url,{redirect:"follow",headers:{"user-agent":"Mozilla/5.0 (compatible; personal stock availability monitor)","accept-language":"en-GB,en;q=0.9"}});
   let body;
-  if(!res.ok && r.id==="menkind" && res.status===403){
+  if(r.id==="smyths"){
+    // Smyths' rendered/indexable product representation is more reliable than its JS-heavy raw response.
+    const proxy="https://r.jina.ai/"+r.url;
+    const pr=await fetch(proxy,{headers:{"accept":"text/plain"}});
+    if(pr.ok){ body=await pr.text(); note="Smyths rendered reader"; }
+    else { if(!res.ok) throw new Error("HTTP "+res.status+"; reader "+pr.status); body=await res.text(); note="Smyths raw fallback"; }
+  } else if(!res.ok && r.id==="menkind" && res.status===403){
     const proxy="https://r.jina.ai/https://www.menkind.co.uk/needoh-24-days-fidget-advent-calendar";
     const pr=await fetch(proxy,{headers:{"accept":"text/plain"}});
     if(!pr.ok) throw new Error("HTTP 403; reader "+pr.status);
