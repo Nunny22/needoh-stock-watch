@@ -41,15 +41,23 @@ const retailers=[];
 for(const r of cfg){
  let status="error",note="";
  try{
+  if(r.id==="smyths"){
+    const api="https://www.smythstoys.com/api/uk/en-gb/product/product-inventory?code=258225&userId=anonymous&bundle=false";
+    const ir=await fetch(api,{headers:{"accept":"application/json","accept-language":"en-GB,en;q=0.9","x-smyths-site-id":"uk","referer":r.url,"user-agent":"Mozilla/5.0 (compatible; personal stock availability monitor)"}});
+    if(!ir.ok) throw new Error("Smyths inventory HTTP "+ir.status);
+    const inv=await ir.json();
+    if(String(inv?.code)!=="258225") throw new Error("Smyths inventory product mismatch");
+    const hd=inv?.hdSection||{};
+    const price=Number(inv?.prices?.value);
+    if(hd.isPreOrder===true) status="preorder";
+    else if(hd.isAvailableForDelivery===true) status="in_stock";
+    else if(hd.stockStatus==="OUTOFSTOCK"||hd.isAvailableForDelivery===false) status="out_of_stock";
+    else status="watching";
+    note="Smyths inventory API; HD="+String(hd.stockStatus||"unknown")+"; delivery="+String(hd.isAvailableForDelivery)+"; price="+(Number.isFinite(price)?price:"?");
+  } else {
   const res=await fetch(r.url,{redirect:"follow",headers:{"user-agent":"Mozilla/5.0 (compatible; personal stock availability monitor)","accept-language":"en-GB,en;q=0.9"}});
   let body;
-  if(r.id==="smyths"){
-    // Smyths' rendered/indexable product representation is more reliable than its JS-heavy raw response.
-    const proxy="https://r.jina.ai/"+r.url;
-    const pr=await fetch(proxy,{headers:{"accept":"text/plain"}});
-    if(pr.ok){ body=await pr.text(); note="Smyths rendered reader"; }
-    else { if(!res.ok) throw new Error("HTTP "+res.status+"; reader "+pr.status); body=await res.text(); note="Smyths raw fallback"; }
-  } else if(!res.ok && r.id==="menkind" && res.status===403){
+  if(!res.ok && r.id==="menkind" && res.status===403){
     const proxy="https://r.jina.ai/https://www.menkind.co.uk/needoh-24-days-fidget-advent-calendar";
     const pr=await fetch(proxy,{headers:{"accept":"text/plain"}});
     if(!pr.ok) throw new Error("HTTP 403; reader "+pr.status);
@@ -60,6 +68,7 @@ for(const r of cfg){
     body=await res.text();
   }
   status=detect(body,r);
+  }
  }catch(e){note=String(e.message||e).slice(0,160)}
  const prev=previous.get(r.id);
  retailers.push({...r,status,note,checkedAt:now,changedAt:prev&&prev.status===status?(prev.changedAt||prev.checkedAt):now});
