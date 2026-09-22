@@ -11,7 +11,7 @@ function detect(html,r){
  const t=html.replace(/\s+/g," ").toLowerCase();
  const has=(x)=>t.includes(String(x).toLowerCase());
  if(r.id==="smyths"){
-  const exact=has("needoh 2026 advent calendar")&&has("£29.99");
+  const exact=has("needoh 2026 advent calendar")||has("needoh%202026%20advent%20calendar")||has("needoh-2026-advent-calendar");
   if(!exact) return "unknown";
   if(has("out of stock")||has("sold out")||has("currently unavailable")||has("not available for home delivery")) return "out_of_stock";
   if((has("pre-order")||has("pre order"))&&(has("home delivery")||has("add to basket")||has("click & collect"))) return "preorder";
