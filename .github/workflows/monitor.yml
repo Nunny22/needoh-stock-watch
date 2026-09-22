@@ -1,5 +1,5 @@
 name: NeeDoh Stock Watch - Redundant Backup
-on:
+'on':
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
