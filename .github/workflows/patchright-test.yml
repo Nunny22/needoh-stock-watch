@@ -27,4 +27,5 @@ jobs:
         run: node src/monitor.js
       - name: Show Smyths result
         if: always()
-        run: grep -A 18 '"id": "smyths"' docs/status.json || true
+        run: |
+          grep -A 18 '"id": "smyths"' docs/status.json || true
