@@ -8,6 +8,8 @@ name: NeeDoh Stock Watch - Redundant Backup
     paths:
       - 'src/monitor.js'
       - 'config/retailers.json'
+      - 'package.json'
+      - '.github/workflows/monitor.yml'
 permissions:
   contents: write
 concurrency:
