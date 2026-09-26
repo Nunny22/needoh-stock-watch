@@ -1,1 +1,12 @@
-{"name":"needoh-stock-watch","version":"1.0.0","private":true,"type":"module","scripts":{"monitor":"node src/monitor.js"},"dependencies":{"playwright":"1.55.0"}}
+{
+  "name": "needoh-stock-watch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "monitor": "node src/monitor.js"
+  },
+  "dependencies": {
+    "patchright": "latest"
+  }
+}
